@@ -48,4 +48,59 @@ public class PersonServiceTest {
         //Then
         Assertions.assertEquals(person.getFirstname(),actual.getFirstname(),() -> "The firstname is different");
     }
+
+    @DisplayName("When create a Person with sucess Should Contains lastname in return Person Object")
+    @Test
+    void testCreatePersonWithSuccessShouldContainsLastNameInReturnPersonObject(){
+        //Given
+        IPersonService service = new PersonService();
+
+        //When
+        Person actual = service.createPerson(person);
+
+        //Then
+        Assertions.assertEquals(person.getLastName(),actual.getLastName(),() -> "The lastname is different");
+        Assertions.assertNotNull(actual);
+    }
+
+    @DisplayName("When create a Person with sucess Should Contains email in return Person Object")
+    @Test
+    void testCreatePersonWithSucessShouldContainsEmailInResturnObject(){
+        //Given
+        IPersonService service = new PersonService();
+
+        //When
+        Person actual = service.createPerson(person);
+
+        //Then
+        Assertions.assertEquals(person.getEmail(),actual.getEmail(),() -> "The email is different");
+    }
+
+    @DisplayName("When create a Person with sucess Should Contains Gender in return Person Object")
+    @Test
+    void testCreatePersonWithSucessShouldContainsGenderInResturnObject(){
+        //Given
+        IPersonService service = new PersonService();
+
+        //When
+        Person actual = service.createPerson(person);
+
+        //Then
+        Assertions.assertEquals(person.getGender(),actual.getGender(),() -> "The gender is different");
+    }
+
+    @DisplayName("When create a Person with sucess Should Contains address in return Person Object")
+    @Test
+    void testCreatePersonWithSucessShouldContainsAddressInResturnObject(){
+        //Given
+        IPersonService service = new PersonService();
+
+        //When
+        Person actual = service.createPerson(person);
+
+        //Then
+        Assertions.assertEquals(person.getAddress(),actual.getAddress(),() -> "The Address is different");
+    }
+
+
 }
